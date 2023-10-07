@@ -3,15 +3,16 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
+    id 'com.google.gms.google-services'
 
 }
 
 android {
-    namespace 'com.example.adi'
+    namespace 'com.example.electratouch'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.adi"
+        applicationId "com.example.electratouch"
         minSdk 24
         targetSdk 33
         versionCode 1
