@@ -1,14 +1,11 @@
-## Adi
-
-> App Documentation [here](https://harisheoran.github.io/projects/warriorsofhind/)
+## Electra Touch
 
 ### Tech Stack
 - Jetpack Compose
-- Retrofit for network request
-- Coil for image loading
 - Material 3
 - MVVM Architecture
 - Hilt for Dependency Injection
 - OkHttp and Chucker for network debugging
 - Leak Canary for memory leak check
-- [Json Bin](https://jsonbin.io/) for backend
+- Firebase Cloud Firestore
+- Firebase Authentication
