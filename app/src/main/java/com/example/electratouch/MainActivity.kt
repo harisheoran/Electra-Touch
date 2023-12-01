@@ -20,6 +20,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.electratouch.components.BottomNavigationBar
 import com.example.electratouch.components.MyAppBar
+import com.example.electratouch.models.PartyList
 import com.example.electratouch.screens.AboutUI
 import com.example.electratouch.screens.DatabaseScreen
 import com.example.electratouch.screens.ElectionScreen
@@ -59,7 +60,7 @@ fun MyApp(
     val backStackEntry by navController.currentBackStackEntryAsState()
     //  val currentScreen = backStackEntry?.arguments?.getString("kingName") ?: Home.label
     val currentRoute = backStackEntry?.destination?.route
-    val items = listOf<Destinations>(MyDatabase, Election, Admin)
+    val items = listOf<Destinations>(MyDatabase, Election)
 
     Scaffold(
         topBar = {
@@ -101,12 +102,7 @@ fun MyApp(
             composable(
                 route = Election.route
             ) {
-                ElectionScreen()
-            }
-            composable(
-                route = Admin.route
-            ) {
-                AboutUI()
+                ElectionScreen(partyList = PartyList().partyList)
             }
         }
     }
